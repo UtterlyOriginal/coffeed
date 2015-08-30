@@ -1,0 +1,2 @@
+# coffeed
+Practice django project
