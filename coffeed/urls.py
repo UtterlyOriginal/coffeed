@@ -1,8 +1,7 @@
-from django.conf.urls import include, url
+from django.conf.urls import patterns,include, url
 from django.contrib import admin
-import core.views as coreviews
 
-urlpatterns = [
+urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$',coreviews.SplashView.as_view()),
-]
+    (r'', include('core.urls')),
+)
